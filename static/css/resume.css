@@ -30,13 +30,18 @@ section {
     font-size: 1em; }
 
 .paper {
-  width: 8.5in;
-  height: 11in;
-  margin: auto;
+  max-width: 8.5in;
+  min-height: 11in;
+  margin: 20px auto;
   background: #fff;
   padding-top: 1px;
-  margin-top: -1px;
   overflow: hidden; }
+  @media print {
+    .paper {
+      width: 8.5in;
+      height: 11in;
+      margin: auto;
+      margin-top: -1px; } }
   .paper .container {
     padding: 20px; }
 
@@ -103,7 +108,7 @@ section {
 
 .centered-container {
   margin: auto;
-  width: 8.5in;
+  max-width: 8.5in;
   text-align: center; }
 
 .message {

@@ -54,12 +54,20 @@ section {
 }
 
 .paper {
-    width: 8.5in;
-    height: 11in;
-    margin: auto;
+    max-width: 8.5in;
+    min-height: 11in;
+    margin: $u auto;
+
+    // An unfortunate hack. TODO: support other page sizes.
+    @media print {
+        width: 8.5in;
+        height: 11in;
+        margin: auto;
+        margin-top: -1px;
+    }
+
     background: #fff;
     padding-top: 1px;
-    margin-top: -1px;
     overflow: hidden;
 
     .container {
@@ -141,13 +149,13 @@ section {
 
 .title {
     font-family: "Tinos";
-    font-size:0.8em;
+    font-size: 0.8em;
     font-weight:normal;
 }
 
 .centered-container {
     margin: auto;
-    width: 8.5in;
+    max-width: 8.5in;
     text-align: center;
 }
 
