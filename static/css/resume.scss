@@ -8,7 +8,7 @@ $font-large: 1.4em;
 $font-small: 1em;
 $font-medium: 1.2em;
 
-$theme-color: #A0CBEA;
+$theme-color: #eaa0a0;
 
 body {
     font-family: "Tinos", serif;
@@ -177,4 +177,8 @@ section {
     @media print {
         display: none;
     }
+}
+
+::selection {
+    background: $theme-color;
 }

@@ -127,4 +127,7 @@ section {
     .message {
       display: none; } }
 
+::selection {
+  background: #eaa0a0; }
+
 /*# sourceMappingURL=resume.css.map */
