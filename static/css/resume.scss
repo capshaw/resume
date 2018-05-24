@@ -3,12 +3,97 @@ $ud2: $u/2;
 $ud4: $u/4;
 $ud5: $u/5;
 $um2: $u*2;
+$u2: $u * 2;
 
-$font-large: 1.4em;
-$font-small: 1em;
-$font-medium: 1.2em;
+$theme-color: #f4d142;
 
-$theme-color: #eaa0a0;
+.resume {
+    font-family: 'Noto Serif', serif;
+    background: #fff;
+    max-width: 8.5in;
+    max-height: 11in;
+    padding: $u2;
+    box-sizing: border-box;
+    margin: auto;
+    line-height: 1.4em;
+
+    &-Name {
+        font-weight: bold;
+        font-family: 'Open Sans';
+
+    }
+
+    &-Title {
+    }
+
+    &-ContactInfo {
+        float: right;
+        font-size: smaller;
+    }
+
+    &-SectionTitle {
+        font-family: 'Open Sans';
+        border-bottom: 2px solid #000;
+        font-size: 0.9em;
+        font-weight: bold;
+        margin: $u 0 $ud2 0;
+        text-transform: uppercase;
+        clear: both;
+
+        &--first {
+            margin-top: 2 * $u;
+        }
+    }
+
+    &-Position {
+        margin-top: $u;
+
+        &--Summary {
+        }
+
+        &-EmployerTitle {
+            font-size: 0.9em;
+            font-family: 'Open Sans';
+            font-weight: bold;
+            margin-bottom: $ud2;
+
+            &--minor {
+                font-weight: normal;
+                font-style: italic;
+                font-family: 'Noto Serif', serif;
+            }
+        }
+
+        &-Header {
+            // margin-top: $ud2;
+        }
+
+        &-Dates {
+            float: right;
+        }
+
+        &-Content {
+            font-size: 0.9em;
+            line-height: 1.6em;
+            max-width: 600px;
+
+            &--full-size {
+                max-width: 100%;
+            }
+        }
+
+        &-ContentTitle {
+            font-size: 0.8em;
+            vertical-align: top;
+            text-transform: uppercase;
+        }
+
+        ul {
+            padding: 0 0 0 $u;
+            margin: $ud2 0;
+        }
+    }
+}
 
 body {
     font-family: "Tinos", serif;
@@ -21,162 +106,6 @@ body {
 a {
   color: #000;
   text-decoration: none;
-  border-bottom: 1px solid #ccc;
-}
-
-section {
-
-    clear: both;
-
-    h1 {
-        font-family: "Open Sans", sans-serif;
-        border-bottom: 2px solid #000;
-        font-size: $font-small;
-        font-weight: bold;
-        margin: $u 0 0 0;
-        text-transform: uppercase;
-    }
-
-    h2 {
-        font-size: $font-small;
-        font-style: italic;
-        font-weight: normal;
-        margin: $ud2 0 $ud5 0;
-    }
-
-    ul, li {
-        margin: 0;
-    }
-
-    li {
-        font-size: $font-small;
-    }
-}
-
-.paper {
-    max-width: 8.5in;
-    min-height: 11in;
-    margin: $u auto;
-
-    // An unfortunate hack. TODO: support other page sizes.
-    @media print {
-        width: 8.5in;
-        height: 11in;
-        margin: auto;
-        margin-top: -1px;
-    }
-
-    background: #fff;
-    padding-top: 1px;
-    overflow: hidden;
-
-    .container {
-        padding: $u;
-    }
-}
-
-.name-header {
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-    font-size: $font-large;
-    float: left;
-    padding-bottom: $u;
-}
-
-.contact {
-    font-weight: 400;
-    font-size: 0.9em;
-    line-height: 1.4em;
-    float: right;
-    text-align: right;
-    padding-top: $ud2;
-
-    i {
-        margin-left: $ud4;
-        font-size: 0.8em;
-        width:  $ud2;
-        text-align: right;
-    }
-}
-
-.bar {
-    background: #eee;
-    width: 100px;
-    height: $ud4;
-    display: inline-block;
-    border: 1px solid #333;
-
-    .filled {
-        background: #333;
-        height: $ud4;
-    }
-}
-
-.skill {
-    font-size: $font-small;
-    display: block;
-
-    .bar {
-        float: right;
-        margin-top: $ud4;
-    }
-}
-
-.just-text {
-    font-size: $font-small;
-}
-
-.left-u {
-    margin-left: $u;
-}
-
-.left-ud2 {
-    margin-left: $ud2;
-}
-
-.top-ud2 {
-    margin-top: $ud2;
-}
-
-.date {
-    margin-top: $ud2 * 2;
-    text-align: right;
-}
-
-.employeer {
-    margin-top: $ud2 * 2;
-}
-
-.title {
-    font-family: "Tinos";
-    font-size: 0.8em;
-    font-weight:normal;
-}
-
-.centered-container {
-    margin: auto;
-    max-width: 8.5in;
-    text-align: center;
-}
-
-.message {
-    background: #fff;
-    margin: 0 auto $u auto;
-    padding: $u;
-    font-family: "Helvetica", sans-serif;
-    font-weight: 300;
-    color: #333;
-    border-bottom: 1px solid #ddd;
-
-    a {
-        font-weight: bold;
-        border-bottom: 1px solid #ddd;
-        color: #333;
-    }
-
-    @media print {
-        display: none;
-    }
 }
 
 ::selection {
