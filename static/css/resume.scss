@@ -17,6 +17,11 @@ $theme-color: #f4d142;
     margin: auto;
     line-height: 1.4em;
 
+    &-OuterContainer {
+        // Overflow from max-height on mobile requires this.
+        background: #fff;
+    }
+
     &-Name {
         font-weight: bold;
         font-family: 'Open Sans';
