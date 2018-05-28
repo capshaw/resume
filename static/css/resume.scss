@@ -17,7 +17,7 @@ $theme-color: #f4d142;
     margin: auto;
     line-height: 1.4em;
 
-    &-OuterContainer {
+    &-InnerContainer {
         // Overflow from max-height on mobile requires this.
         background: #fff;
     }

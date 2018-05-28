@@ -7,7 +7,7 @@
   box-sizing: border-box;
   margin: auto;
   line-height: 1.4em; }
-  .resume-OuterContainer {
+  .resume-InnerContainer {
     background: #fff; }
   .resume-Name {
     font-weight: bold;
