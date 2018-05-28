@@ -3,12 +3,11 @@
   background: #fff;
   max-width: 8.5in;
   max-height: 11in;
-  padding: 40px;
-  box-sizing: border-box;
   margin: auto;
   line-height: 1.4em; }
   .resume-InnerContainer {
-    background: #fff; }
+    background: #fff;
+    padding: 40px; }
   .resume-Name {
     font-weight: bold;
     font-family: 'Open Sans'; }

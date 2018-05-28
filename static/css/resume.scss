@@ -12,14 +12,13 @@ $theme-color: #f4d142;
     background: #fff;
     max-width: 8.5in;
     max-height: 11in;
-    padding: $u2;
-    box-sizing: border-box;
     margin: auto;
     line-height: 1.4em;
 
     &-InnerContainer {
         // Overflow from max-height on mobile requires this.
         background: #fff;
+        padding: $u2;
     }
 
     &-Name {
