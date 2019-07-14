@@ -5,7 +5,9 @@ $ud5: $u/5;
 $um2: $u*2;
 $u2: $u * 2;
 
-$theme-color: #f4d142;
+// $theme-color: #f4d142;
+$theme-color: #ccc;
+$contrast-to-theme-color: #f4d142;
 
 .resume {
     font-family: 'Noto Serif', serif;
@@ -40,7 +42,8 @@ $theme-color: #f4d142;
         border-bottom: 2px solid #000;
         font-size: 0.9em;
         font-weight: bold;
-        margin: $u 0 $ud2 0;
+        // margin: $u 0 $ud2 0;
+        margin: 0 0 $ud2 0;
         text-transform: uppercase;
         clear: both;
 
@@ -78,8 +81,7 @@ $theme-color: #f4d142;
 
         &-Content {
             font-size: 0.9em;
-            line-height: 1.6em;
-            max-width: 600px;
+            line-height: 1.5em;
 
             &--full-size {
                 max-width: 100%;
@@ -99,6 +101,14 @@ $theme-color: #f4d142;
     }
 }
 
+.callout {
+    margin: 0 $u 0 $u/2;
+}
+
+.embedded {
+    // margin: $u/2 0 0 $u/2;
+}
+
 body {
     font-family: "Tinos", serif;
     font-size: 93%;
@@ -110,8 +120,50 @@ body {
 a {
   color: #000;
   text-decoration: none;
+  // border-bottom: 1px solid $theme-color;
+
+  &.no-show {
+      border-bottom: none;
+  }
+}
+
+h5 {
+    font-size: 0.8em;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    margin: 0 0 $u/2 0;
+    text-transform: uppercase;
+
+    &.no-spacing {
+        margin: 0;
+    }
+
+    &::before {
+      content: "█ ";
+      color: $contrast-to-theme-color;
+      margin-right: 0.5em;
+      -webkit-print-color-adjust: exact;
+    }
+}
+
+h6 {
+    font-size: 1em;
+    margin: 0.3em 0 0 0;
+    font-weight: normal;
+    font-style: italic;
+    border-top: 1px dashed #666;
+    padding-top: 0.2em;
+
+    > .numbered {
+        float: right;
+    }
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 1.5em 0;
 }
 
 ::selection {
-    background: $theme-color;
+    background: $contrast-to-theme-color;
 }
