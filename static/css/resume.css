@@ -15,8 +15,10 @@
   font-weight: bold;
   font-family: "Open Sans";
 }
+.resume-Title {
+  margin-bottom: 20px;
+}
 .resume-ContactInfo {
-  float: right;
   font-size: smaller;
 }
 .resume-SectionTitle {

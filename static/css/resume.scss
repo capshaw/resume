@@ -30,10 +30,10 @@ $contrast-to-theme-color: #f4d142;
     }
 
     &-Title {
+        margin-bottom: $u;
     }
 
     &-ContactInfo {
-        float: right;
         font-size: smaller;
     }
 
