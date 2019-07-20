@@ -102,7 +102,8 @@ $contrast-to-theme-color: #f4d142;
 }
 
 .callout {
-    margin: 0 $u 0 $u/2;
+    margin: 0 $u*3 0 $u/2;
+    position: relative;
 }
 
 .embedded {
@@ -151,7 +152,7 @@ h6 {
     margin: 0.3em 0 0 0;
     font-weight: normal;
     font-style: italic;
-    border-top: 1px dashed #666;
+    border-top: 1px solid #bbb;
     padding-top: 0.2em;
 
     > .numbered {
@@ -166,4 +167,67 @@ hr {
 
 ::selection {
     background: $contrast-to-theme-color;
+}
+
+// Below this is hacky / experimental. Please don't judge too much.
+
+.bar-chart {
+    height: 100%;
+    border-bottom: 1px solid #000;
+    width: 12px;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    display: block;
+}
+
+.bar-chart-2 {
+    height: 100%;
+    width: 12px;
+    position: absolute;
+    right: -52px;
+    top: 0;
+    display: block;
+    font-size: smaller;
+}
+
+.rotated-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.bar {
+    height: 25%;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    display: block;
+    box-sizing: border-box;
+
+    &--padded {
+        padding-top: 5px;
+    }
+}
+
+.export-alert {
+    font-weight: bold;
+    max-width: 8.5in;
+    margin: auto;
+    padding: 20px;
+    background: #efefef;
+    font-family: 'Open Sans';
+    box-sizing: border-box;
+    font-size: smaller;
+    color: #999;
+    text-align: center;
+
+    > a {
+        text-decoration: underline;
+        color: #666;
+    }
+}
+
+@media print{
+    .noprint{
+        display:none;
+    }
 }

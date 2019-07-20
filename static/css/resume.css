@@ -1,101 +1,186 @@
 @charset "UTF-8";
 .resume {
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   background: #fff;
   max-width: 8.5in;
   max-height: 11in;
   margin: auto;
-  line-height: 1.4em; }
-  .resume-InnerContainer {
-    background: #fff;
-    padding: 40px; }
-  .resume-Name {
-    font-weight: bold;
-    font-family: 'Open Sans'; }
-  .resume-ContactInfo {
-    float: right;
-    font-size: smaller; }
-  .resume-SectionTitle {
-    font-family: 'Open Sans';
-    border-bottom: 2px solid #000;
-    font-size: 0.9em;
-    font-weight: bold;
-    margin: 0 0 10px 0;
-    text-transform: uppercase;
-    clear: both; }
-    .resume-SectionTitle--first {
-      margin-top: 40px; }
-  .resume-Position {
-    margin-top: 20px; }
-    .resume-Position-EmployerTitle {
-      font-size: 0.9em;
-      font-family: 'Open Sans';
-      font-weight: bold;
-      margin-bottom: 10px; }
-      .resume-Position-EmployerTitle--minor {
-        font-weight: normal;
-        font-style: italic;
-        font-family: 'Noto Serif', serif; }
-    .resume-Position-Dates {
-      float: right; }
-    .resume-Position-Content {
-      font-size: 0.9em;
-      line-height: 1.5em; }
-      .resume-Position-Content--full-size {
-        max-width: 100%; }
-    .resume-Position-ContentTitle {
-      font-size: 0.8em;
-      vertical-align: top;
-      text-transform: uppercase; }
-    .resume-Position ul {
-      padding: 0 0 0 20px;
-      margin: 10px 0; }
+  line-height: 1.4em;
+}
+.resume-InnerContainer {
+  background: #fff;
+  padding: 40px;
+}
+.resume-Name {
+  font-weight: bold;
+  font-family: "Open Sans";
+}
+.resume-ContactInfo {
+  float: right;
+  font-size: smaller;
+}
+.resume-SectionTitle {
+  font-family: "Open Sans";
+  border-bottom: 2px solid #000;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  clear: both;
+}
+.resume-SectionTitle--first {
+  margin-top: 40px;
+}
+.resume-Position {
+  margin-top: 20px;
+}
+.resume-Position-EmployerTitle {
+  font-size: 0.9em;
+  font-family: "Open Sans";
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.resume-Position-EmployerTitle--minor {
+  font-weight: normal;
+  font-style: italic;
+  font-family: "Noto Serif", serif;
+}
+.resume-Position-Dates {
+  float: right;
+}
+.resume-Position-Content {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+.resume-Position-Content--full-size {
+  max-width: 100%;
+}
+.resume-Position-ContentTitle {
+  font-size: 0.8em;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+.resume-Position ul {
+  padding: 0 0 0 20px;
+  margin: 10px 0;
+}
 
 .callout {
-  margin: 0 20px 0 10px; }
+  margin: 0 60px 0 10px;
+  position: relative;
+}
 
 body {
   font-family: "Tinos", serif;
   font-size: 93%;
   background: #eee;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 a {
   color: #000;
-  text-decoration: none; }
-  a.no-show {
-    border-bottom: none; }
+  text-decoration: none;
+}
+a.no-show {
+  border-bottom: none;
+}
 
 h5 {
   font-size: 0.8em;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: bold;
   margin: 0 0 10px 0;
-  text-transform: uppercase; }
-  h5.no-spacing {
-    margin: 0; }
-  h5::before {
-    content: "█ ";
-    color: #f4d142;
-    margin-right: 0.5em;
-    -webkit-print-color-adjust: exact; }
+  text-transform: uppercase;
+}
+h5.no-spacing {
+  margin: 0;
+}
+h5::before {
+  content: "█ ";
+  color: #f4d142;
+  margin-right: 0.5em;
+  -webkit-print-color-adjust: exact;
+}
 
 h6 {
   font-size: 1em;
   margin: 0.3em 0 0 0;
   font-weight: normal;
   font-style: italic;
-  border-top: 1px dashed #666;
-  padding-top: 0.2em; }
-  h6 > .numbered {
-    float: right; }
+  border-top: 1px solid #bbb;
+  padding-top: 0.2em;
+}
+h6 > .numbered {
+  float: right;
+}
 
 hr {
   border: 1px solid #ccc;
-  margin: 1.5em 0; }
+  margin: 1.5em 0;
+}
 
 ::selection {
-  background: #f4d142; }
+  background: #f4d142;
+}
+
+.bar-chart {
+  height: 100%;
+  border-bottom: 1px solid #000;
+  width: 12px;
+  position: absolute;
+  right: -40px;
+  top: 0;
+  display: block;
+}
+
+.bar-chart-2 {
+  height: 100%;
+  width: 12px;
+  position: absolute;
+  right: -52px;
+  top: 0;
+  display: block;
+  font-size: smaller;
+}
+
+.rotated-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.bar {
+  height: 25%;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  display: block;
+  box-sizing: border-box;
+}
+.bar--padded {
+  padding-top: 5px;
+}
+
+.export-alert {
+  font-weight: bold;
+  max-width: 8.5in;
+  margin: auto;
+  padding: 20px;
+  background: #efefef;
+  font-family: "Open Sans";
+  box-sizing: border-box;
+  font-size: smaller;
+  color: #999;
+  text-align: center;
+}
+.export-alert > a {
+  text-decoration: underline;
+  color: #666;
+}
+
+@media print {
+  .noprint {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=resume.css.map */
