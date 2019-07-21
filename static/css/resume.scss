@@ -233,16 +233,16 @@ hr {
     &--pattern3 {
         background: repeating-linear-gradient(
             0deg,
-            #fff 0px 6px,
-            #999 6px 7px
+            #fff 0px 4px,
+            #999 4px 5px
         );
     }
 }
 
 .pattern-swatch {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border: 1px solid #000;
 }
 

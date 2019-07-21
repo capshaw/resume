@@ -132,12 +132,12 @@ hr {
 .patterned--pattern2 {
   background: repeating-linear-gradient(-45deg, #999 0 1px, #fff 1px 4px); }
 .patterned--pattern3 {
-  background: repeating-linear-gradient(0deg, #fff 0px 6px, #999 6px 7px); }
+  background: repeating-linear-gradient(0deg, #fff 0px 4px, #999 4px 5px); }
 
 .pattern-swatch {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border: 1px solid #000; }
 
 .export-alert {
