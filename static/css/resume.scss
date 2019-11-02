@@ -17,6 +17,16 @@ $contrast-to-theme-color: #eee;
     margin: auto;
     line-height: 1.4em;
 
+    -webkit-box-shadow: 0px 0px 22px 3px rgba(224,224,224,1);
+    -moz-box-shadow: 0px 0px 22px 3px rgba(224,224,224,1);
+    box-shadow: 0px 0px 22px 3px rgba(224,224,224,1);
+
+    // TODO: Find a way to abstract this better.
+    margin-bottom: $u;
+    @media print{
+        margin-bottom: 0;
+    }
+
     &-InnerContainer {
         // Overflow from max-height on mobile requires this.
         background: #fff;
@@ -121,7 +131,7 @@ body {
 a {
     color: #000;
     text-decoration: none;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #333;
 
     &.no-show {
         border-bottom: none;
@@ -242,7 +252,7 @@ hr {
     font-weight: bold;
     max-width: 8.5in;
     margin: auto;
-    padding: 20px;
+    padding: $u * 1.5;
     background: #efefef;
     font-family: 'Open Sans';
     box-sizing: border-box;
@@ -251,9 +261,9 @@ hr {
     text-align: center;
 
     > a {
-        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: 1px solid #666;
         color: #666;
-        border-bottom: none;
     }
 }
 
