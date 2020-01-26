@@ -9,7 +9,7 @@ $theme-color: #ccc;
 $contrast-to-theme-color: #eee;
 
 .resume {
-    font-family: 'Noto Serif', serif;
+    font-family: 'CMU Serif', serif;
     background: #fff;
     max-width: 8.5in;
     height: 11in;
@@ -108,7 +108,7 @@ $contrast-to-theme-color: #eee;
     position: relative;
 
     &--timeline {
-        margin: 0 $u*3 0 $u/2;
+        margin: 0 $u/2 0 $u/2;
     }
 }
 
@@ -122,11 +122,11 @@ body {
 
 a {
     color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #333;
+    text-decoration: underline;
 
     &.no-show {
         border-bottom: none;
+        text-decoration: none;
     }
 }
 
@@ -143,11 +143,10 @@ h5 {
 }
 
 h6 {
-    font-size: 0.9em;
-    margin: 0.3em 0 0 -14px;
+    font-size: 0.8em;
+    margin: 0.3em 0 0 0;
     font-family: 'Open Sans';
     font-weight: bold;
-    padding-top: 0.2em;
 
     > .numbered {
         float: right;

@@ -1,5 +1,5 @@
 .resume {
-  font-family: 'Noto Serif', serif;
+  font-family: 'CMU Serif', serif;
   background: #fff;
   max-width: 8.5in;
   height: 11in;
@@ -62,7 +62,7 @@
   margin: 0 20px 0 10px;
   position: relative; }
   .callout--timeline {
-    margin: 0 60px 0 10px; }
+    margin: 0 10px 0 10px; }
 
 body {
   font-family: "Tinos", serif;
@@ -73,10 +73,10 @@ body {
 
 a {
   color: #000;
-  text-decoration: none;
-  border-bottom: 1px solid #333; }
+  text-decoration: underline; }
   a.no-show {
-    border-bottom: none; }
+    border-bottom: none;
+    text-decoration: none; }
 
 h5 {
   font-size: 0.8em;
@@ -88,11 +88,10 @@ h5 {
     margin: 0; }
 
 h6 {
-  font-size: 0.9em;
-  margin: 0.3em 0 0 -14px;
+  font-size: 0.8em;
+  margin: 0.3em 0 0 0;
   font-family: 'Open Sans';
-  font-weight: bold;
-  padding-top: 0.2em; }
+  font-weight: bold; }
   h6 > .numbered {
     float: right; }
 
