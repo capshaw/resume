@@ -9,8 +9,9 @@ $theme-color: #ccc;
 $contrast-to-theme-color: #eee;
 
 .resume {
-    font-family: 'CMU Serif', serif;
+    font-family: 'Georgia', serif;
     background: #fff;
+    zoom: 1.25;
     max-width: 8.5in;
     height: 11in;
     margin: auto;
@@ -24,6 +25,7 @@ $contrast-to-theme-color: #eee;
     margin-bottom: $u;
     @media print{
         margin-bottom: 0;
+        zoom: 1.0;
     }
 
     &-InnerContainer {

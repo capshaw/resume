@@ -1,6 +1,7 @@
 .resume {
-  font-family: 'CMU Serif', serif;
+  font-family: 'Georgia', serif;
   background: #fff;
+  zoom: 1.25;
   max-width: 8.5in;
   height: 11in;
   margin: auto;
@@ -11,7 +12,8 @@
   margin-bottom: 20px; }
   @media print {
     .resume {
-      margin-bottom: 0; } }
+      margin-bottom: 0;
+      zoom: 1.0; } }
   .resume-InnerContainer {
     background: #fff;
     padding: 40px; }
