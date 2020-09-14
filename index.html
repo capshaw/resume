@@ -38,8 +38,8 @@
                     <div class="grid__col grid__col--1-of-2">
                         <div class="callout">
                             <h5>Summary</h5>
-                            <p>I have worked at <a href="https://indeed.com">Indeed</a> for six years. During this time, I have worked as both an individual contributor as well as in technical and managerial leadership positions.</p>
-                            <p>My coaching philosophy centers around serving my team. I favor listening over talking, trust over micro-management.</p>
+                            <p>I have worked at <a href="https://indeed.com">Indeed</a> for over six years. During this time, I have worked as both an individual contributor as well as in technical and managerial leadership positions.</p>
+                            <p>My <a href="https://capshaw.me/posts/19/">coaching philosophy</a> centers around serving my team. I favor listening over talking, trust over micro-management.</p>
                             <h5>Current Responsibilities</h5>
                             <ul>
                                 <li>Coach, mentor, and evaluate a team of four software engineers</li>
@@ -104,7 +104,6 @@
                 </div>
             </div>
 
-
             <div class="resume-Position">
                 <div class="resume-Position-Content resume-Position-Content--full-size grid">
                     <div class="grid__col grid__col--2-of-3">
@@ -154,6 +153,12 @@
                 </div>
             </div>
         </div>
+
+        <div class="resume-Version">
+            Exported <span id="export-date"></span>
+        </div>
+    </div>
+        
     </div>
     <script>
         // Hacky code to enable dark-mode by opt-in or time-of-day
@@ -165,6 +170,14 @@
         if ((isTimeForDarkMode || hasDarkModeToggle) && !hasLightModeToggle) {
             document.body.classList.add('darkmode');
         }
+
+        // Set export date for PDF output
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+
+        document.getElementById('export-date').innerHTML = yyyy + '-' + mm + '-' + dd;
     </script>
 </body>
 </html>

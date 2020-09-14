@@ -5,9 +5,6 @@ $ud5: $u/5;
 $um2: $u*2;
 $u2: $u * 2;
 
-$theme-color: #ccc;
-$contrast-to-theme-color: #eee;
-
 .resume {
     font-family: 'Georgia', serif;
     background: #fff;
@@ -17,12 +14,8 @@ $contrast-to-theme-color: #eee;
     margin: auto;
     line-height: 1.4em;
 
-    -webkit-box-shadow: 0px 0px 22px 3px rgba(224,224,224,1);
-    -moz-box-shadow: 0px 0px 22px 3px rgba(224,224,224,1);
-    box-shadow: 0px 0px 22px 3px rgba(224,224,224,1);
-
     margin-bottom: $u;
-    @media print{
+    @media print {
         margin-bottom: 0;
         zoom: 1.0;
     }
@@ -119,6 +112,13 @@ $contrast-to-theme-color: #eee;
         }
     }
 
+    &-Version {
+        font-size: smaller;
+        font-family: monospace;
+        text-align: right;
+        margin: 0 2 * $u;
+    }
+
     .darkmode & {
         -webkit-box-shadow: 0px 0px 22px 3px #222;
         -moz-box-shadow: 0px 0px 22px 3px #222;
@@ -196,7 +196,7 @@ h6 {
 }
 
 ::selection {
-    background: $contrast-to-theme-color;
+    background: #f6d784;
     color: #000;
 }
 
@@ -205,7 +205,6 @@ h6 {
     max-width: 8.5in;
     margin: auto;
     padding: $u * 1.5;
-    background: #efefef;
     font-family: 'Open Sans';
     box-sizing: border-box;
     font-size: smaller;
