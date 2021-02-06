@@ -1,0 +1,114 @@
+\documentclass[11pt]{amsart}
+\usepackage[letterpaper]{geometry}
+\geometry{margin=0.5in}
+
+\usepackage[parfill]{parskip} 
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+% Title section
+\begin{tabularx}{\textwidth}{@{}Xl@{}}
+ \textbf{Andrew Capshaw} & andrew.capshaw@gmail.com \\
+ Software Engineering Manager – Austin, TX & (512) 694-2524 \\
+& \href{https://capshaw.me}{https://capshaw.me} \\
+\end{tabularx}
+\bigskip
+
+\bigskip
+\hrule depth 0.5pt
+
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5} % Default value: 1
+
+\bigskip
+\textsc{about}
+
+I am a Software Engineering Manager currently working at Indeed in Austin, TX. I've been at Indeed for around seven years. During this time, I have worked as both an individual contributor as well as in technical and managerial leadership positions. My \href{https://capshaw.me/posts/19/}{coaching philosophy} centers around thoughtfully serving my team. I favor listening over talking, trust over micro-management.
+
+\bigskip
+\textsc{experience}
+
+\begin{tabularx}{\textwidth}{@{}r | X@{}}
+2019 $\rightarrow$ Present &  \textbf{Software Engineering Manager} – Indeed  \\
+& I currently lead a software engineering team within Indeed Hire, a recruiting services platform. As a manager, I mentor, grow, and evaluate my team. I work with individuals on personal opportunities for growth, with our PM to co-lead the team, and with the team as a whole to ensure we are focusing on the right work. I also continue to remain technical, helping to design new systems and write code when the opportunity presents itself. 
+
+\bigskip
+\textit{Current Responsibilities}
+
+\begin{itemize}[noitemsep, leftmargin=2em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
+\item Coach, mentor, and evaluate a team of software engineers
+\item Collaborate with product management to prioritize, define, and measure experiments
+\item Collaborate with product management, QA, and other engineering leadership to make my team and others successful.
+\item Design and implement product features
+\item Provide technical mentorship to my team and others
+\item Conduct interviews for SWE and QA (500+, some internationally)
+\item Ensure smooth deployment of new features via iterative team process changes
+\end{itemize}
+
+\\
+2017 $\rightarrow$  2019 &  \textbf{Senior Software Engineer / Team Lead} – Indeed \\ 
+& Within Indeed Hire, I have been the tech lead on several teams, building out architectural pieces of code, mentoring new hires and working with product managers to decompose and realize our goals.
+
+\\
+
+Summer 2017  & \textbf{Indeed University Lead} – Indeed \\ 
+& I participated in Indeed's onboarding experience for new hires as a lead. I mentored new hires while getting some first-hand experience being a manager.
+
+ \\
+2014 $\rightarrow$  2017  & \textbf{Software Engineer} – Indeed \\ 
+& I was an individual contributor on the Business Automation Team and later Indeed Hire. \\
+\end{tabularx}
+
+\bigskip
+\textsc{background}
+
+\begin{tabularx}{\textwidth}{@{}X X X@{}}
+\textit{Frontend}
+\bigskip
+\begin{itemize}[noitemsep, leftmargin=2em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
+\item React
+\item CSS (SASS)
+\item Responsive Design / UX
+\end{itemize}
+& 
+\textit{Backend} 
+\bigskip
+\begin{itemize}[noitemsep, leftmargin=2em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
+\item Python (Django, Flask)
+\item Java (Spring)
+\item SQL (MySQL)
+\item RabbitMQ
+\end{itemize}
+
+ &
+ \textit{Education} 
+ 
+ \bigskip
+Rice University
+
+B.S. Computer Science
+ 
+ 2010 $\rightarrow$  2014  \\
+\end{tabularx}
+\endgroup
+\end{document}  
