@@ -1,7 +1,14 @@
+%
+% Basic page set up
+%
 \documentclass[11pt]{amsart}
 \usepackage[letterpaper]{geometry}
-\geometry{margin=0.5in}
+\geometry{margin=0.6in}
+\raggedbottom
 
+%
+% Imports
+%
 \usepackage[parfill]{parskip} 
 \usepackage{graphicx}
 \usepackage{amssymb}
@@ -11,115 +18,201 @@
 \usepackage{enumitem}
 \usepackage{multicol}
 \usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage[svgnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
 
+% 
+% Various global rules
+%
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    filecolor=blue,      
-    urlcolor=blue,
+    linkcolor=SeaGreen,
+    filecolor=SeaGreen,      
+    urlcolor=SeaGreen,
 }
+\titleformat{\section}
+  {\bfseries}{}{0em}{}
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\itshape}{}{0em}{}
+  
+\fancyhead{} % clear all header fields
+\fancyfoot{} % clear all footer fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.2pt}
+\fancyfoot[R]{\begin{small}Andrew Capshaw / Resume / \today\end{small}}
+\fancyfoot[L]{\begin{small}\thepage\end{small}}
 
-\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\DeclareUnicodeCharacter{2218}{\ensuremath{\circ}}
 
+\tcbset{
+	colback=White,
+	colframe=White,
+	coltitle=Black,
+	colbacktitle=WhiteSmoke,
+	bottomtitle=1.8mm,
+	toptitle=2mm,
+	sharpish corners,
+	boxrule=0mm,
+	left=2mm,
+	right=2mm,
+	bottom=2mm,
+	top=2mm,
+	fonttitle={},
+	% Depends where you want stuff aligned
+	enlarge left by=-3mm,
+	width=\linewidth+6mm
+}
+  
+%
+% Document itself
+%
 \begin{document}
+\pagestyle{fancy}
 
-\thispagestyle{empty}
-
+% 
 % Title section
-\begin{tabularx}{\textwidth}{@{}Xl@{}}
- \textbf{Andrew Capshaw} & andrew@capsh.net \\
- Software Engineering Manager – Austin, TX & +1 (512) 694-2524 \\
+%
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+\textbf{Andrew Capshaw} & +1 (512) 694-2524  \\
+Software Engineering Manager — Austin, TX & andrew@capsh.net \\
 & \href{https://capsh.net}{https://capsh.net} \\
 \end{tabularx}
-\bigskip
+
+%\bigskip
+%\hrule
+
+\section{About}
+
+I am a Software Engineering Manager with ten years of industry experience. Throughout my career I've worked as both an individual contributor as well as in technical and managerial leadership positions. 
+
+Over the years I've developed a \href{https://capsh.net/work/leadership-philosophy/}{leadership philosophy}\footnote{\url{https://capsh.net/work/leadership-philosophy/}} centered around thoughtfully serving my team to ensure their ability to have an impact and a fulfilling career. I would love to engage with potential employers on this and see where we agree and where we disagree.
+
+In my next position I'm open to both technical individual contributor roles as well as frontline management roles. I'm available for remote, hybrid, and in-person roles in Austin, TX. 
 
 \bigskip
-\hrule depth 0.5pt
+\section{Experience}
 
-\begingroup
-\setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.5} % Default value: 1
+% 
+% First job
+%
+\begin{tcolorbox}[
+	title=Software Engineering Manager \textcolor{DarkGray}{/} Indeed,
+	after title={\hfill2019 \textcolor{DarkGray}{$\rightarrow$} Present \textcolor{DarkGray}{(5 years)}}
+]
 
-\bigskip
-%\textsc{about}
+I lead an engineering team that helps employers and candidates schedule interviews on Indeed.com. Prior to this I was an engineering manager on several other teams including one focused on building functionality for the enterprise customer segment and another tasked with building out tech for an internal recruiting agency.\\
 
-I am a software engineering manager currently working at Indeed in Austin, TX. During my nine years at Indeed I have worked as both an individual contributor as well as in technical and managerial leadership positions. As a manager, my \href{https://capsh.net/work/leadership-philosophy/}{leadership philosophy}\footnote{\url{https://capsh.net/work/leadership-philosophy/}} centers around thoughtfully serving my team to put them in the best position to be successful.
+As a manager, I mentor, grow, and evaluate my team. I work with individuals on personal opportunities for growth, with our PM and UX leads to co-lead the team, and with the team as a whole to ensure we are focusing on the right work.
 
-\bigskip
-\textsc{experience}
+\subsubsection{Responsibilities}
 
-\begin{tabularx}{\textwidth}{@{}r | X@{}}
-2019 $\rightarrow$ Present &  \textbf{Software Engineering Manager} – Indeed  \\
-\small{4 years}  & I currently lead a software engineering team at Indeed focused on the enterprise employer segment. We build tools to help enterprises manage their large number of jobs on Indeed effectively. Pervious to this I was an engineering manager on Indeed Hire, a team building a recruiting agency for Indeed.
-
-\bigskip
-As a manager, I mentor, grow, and evaluate my team. I work with individuals on personal opportunities for growth, with our PM and UX leads to co-lead the team, and with the team as a whole to ensure we are focusing on the right work. Current responsibilities include—
-\bigskip
 \begin{itemize}[noitemsep, leftmargin=2em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
-\item Coaching, growing, and evaluating a team of software engineers (average of 5, up to 8)
-\item Defining and driving progress progress towards quarterly goals (\textsc{OKR}s) in collaboration with product leadership
-\item Defining, prioritizing, and measuring the impact of product changes in collaboration with product leadership
-\item Ensuring smooth deployment of new features via iterative team process changes
-\item Conducting interviews for software engineers and managers
-\item Providing technical mentorship to my immediate team and beyond
-\item Designing and implementing product features
+	\item Coach, grow, and evaluate a team of software engineers
+	\item Define and drive progress towards quarterly goals and \textsc{OKR}s in partnership with product leadership
+	\item Define, prioritize, and measure the impact of product changes in partnership with product leadership
+	\item Ensure smooth deployment of new features via iterative team process changes
+	\item Conduct interviews for software engineers, quality assurance engineers, and engineering managers
+	\item Provide technical mentorship to my immediate team and beyond
+	\item Design and implement product features when appropriate
 \end{itemize}
 
-\\
-2017 $\rightarrow$  2019 &  \textbf{Senior Software Engineer / Team Lead} – Indeed \\ 
-\small{2 years}  & During my time on Indeed Hire, I was the tech lead on several teams, building out architectural pieces of code, mentoring new hires and working with product managers to plan and realize our goals. I also participated in Indeed's onboarding experience for new hires (Indeed University) as a lead. I mentored new hires while getting some first-hand experience being a manager.
+\subsubsection{Selected Impact}
 
- \\
-2014 $\rightarrow$  2017  & \textbf{Software Engineer} – Indeed \\ 
-\small{3 years}  & I was an individual contributor on the Business Automation Team and later Indeed Hire. \\
+\begin{itemize}[noitemsep, leftmargin=2em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
+	\item As engineering manager for the Indeed Hire team, I led efforts to deliver a core innovative feature to surface ``close match candidates'' to employers. By focusing employers on candidates that meet most—but not all—of their requirements, we significantly increased employer positive dispositions of these candidates.
+	\item As engineering manager for the Enterprise Job Management team, I took a core role in smoothly sunsetting a duplicative product space and team. For historical reasons, Indeed had built both an SMB and Enterprise jobs management teams. Over the years, it became obvious this was not best for our users and our organization. I led the Enterprise side of the team as we distilled the core unique experiences our team had built, componentized them, and built them into a larger ``configurable jobs management'' system. When the time came to sunset the team, smoothly handed off the product space and offboarded engineers into their next teams.
+	\item I've helped multiple teams polish processes that did not work for them. For one team I led in particular, I revitalized the team by working with the team to design processes that worked for them without being too heavy of a burden. Among other things, I shifted the team to a lightweight Kanban process away from a Scrum-ish process that was not giving the team much value. The team's productivity and happiness increased while overall meeting load and process overhead decreased. % TODO: by what amount?
+\end{itemize}
+
+\end{tcolorbox}
+
+% 
+% Second job
+%
+\begin{tcolorbox}[
+	title=Senior Software Engineer \textcolor{DarkGray}{/} Indeed,
+	after title={\hfill2017 \textcolor{DarkGray}{$\rightarrow$} 2019 \textcolor{DarkGray}{(2 years)}}
+]
+
+During my time on Indeed Hire, I was a tech lead on several teams, building out architectural pieces of code, mentoring new hires and working with product managers to plan and realize our goals. \\
+
+While in this role I also participated in Indeed's onboarding experience for new hires (Indeed University) as a lead. I mentored new hires while getting some first-hand experience being a manager.
+
+\subsubsection{Responsibilities}
+
+\begin{itemize}[noitemsep, leftmargin=2em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
+	\item Mentored new engineers to the team, helping them to onboard and grow as engineers
+	\item Built architectural, green-field, systems to achieve the team mission 
+	\item Wrote and led design reviews to get team buy-in on technical direction
+	\item Helped size and plan roadmaps in collaboration with product leadership
+	\item Acted as developer first responder, ensuring our production systems had high uptime
+\end{itemize}
+
+\subsubsection{Selected Impact}
+
+\begin{itemize}[noitemsep, leftmargin=2em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
+	\item When the Indeed Hire product wanted to quickly test out multiple business models, I led the team effort to build MVP functionality into our internal tools to support this business need. I conceptualized the implementation, got team buy-in, and led the implementation that enabled us to track and bill clients appropriately depending upon the business model. This occurred during the holiday season and had quick turnaround requirements but was delivered on time.
+	\item I integrated Indeed Hire with an external interview platform to automate some parts of the candidate interview process. The intention behind this functionality was to enable Indeed Hire recruiters to quickly screen candidates who were not a good fit for a particular role without having to dedicate time on the phone with the candidate. 
+\end{itemize}
+
+\end{tcolorbox}
+
+%
+% Third job
+%
+\begin{tcolorbox}[
+	title=Software Engineer \textcolor{DarkGray}{/} Indeed,
+	after title={\hfill2014 \textcolor{DarkGray}{$\rightarrow$} 2017 \textcolor{DarkGray}{(3 years)}}
+]
+I was an individual contributor on the Business Automation Team and later Indeed Hire. During this era I worked in CakePHP and later Python with Django. I tended to specialize in frontend development, but I was ultimately a full stack engineer.
+\end{tcolorbox}
+
+\section{Skills}
+\begin{tabularx}{\textwidth}{X X X}
+{
+	\subsubsection{Frontend}
+	\begin{itemize}[noitemsep, leftmargin=1em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
+		\item Javascript (React)
+		\item CSS (SASS)
+		\item Responsive Design / UX
+	\end{itemize}
+}&
+{
+	\subsubsection{Backend}
+	\begin{itemize}[noitemsep, leftmargin=1em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
+		\item Python (Django, Flask)
+		\item Java (Spring)
+		\item SQL (MySQL)
+		\item RabbitMQ
+	\end{itemize}
+}&
+{
+	\subsubsection{Management}
+	\begin{itemize}[noitemsep, leftmargin=1em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
+		\item Kanban
+		\item Service-oriented leadership
+		\item Performance management
+	\end{itemize}
+}
 \end{tabularx}
 
-\bigskip
-\textsc{background}
-
-\begin{tabularx}{\textwidth}{@{}X X X@{}}
-\textit{Frontend}
-\bigskip
-\begin{itemize}[noitemsep, leftmargin=2em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
-\item React
-\item CSS (SASS)
-\item Responsive Design / UX
-\end{itemize}
-& 
-\textit{Backend} 
-\bigskip
-\begin{itemize}[noitemsep, leftmargin=2em, label=\raisebox{0.25ex}{\tiny$\bullet$}]
-\item Python (Django, Flask)
-\item Java (Spring)
-\item SQL (MySQL)
-\item RabbitMQ
-\end{itemize}
-
- &
- \textit{Education} 
- \bigskip
+\section{Education}
  
-Rice University
-
-B.S. Computer Science
-
+Rice University \\
+B.S. Computer Science \\
  2010 $\rightarrow$  2014
 
-\end{tabularx}
-\newpage
-\textsc{projects / stories}
+%\textsc{projects / stories}
+%From SCRUM to Kanban
+%Coaching Philosophy
+%Performance improvement
+%Bridging disagreements
+%Regaining trust after a team lost it due to prior manager
+%Removing code
 
-Close Match Candidates
-
-Keeping the lights on and sunsetting
-
-From SCRUM to Kanban
-
-Coaching Philosophy
-
-Performance improvement
-
-Bridging disagreements
-
-\endgroup
 \end{document}  
